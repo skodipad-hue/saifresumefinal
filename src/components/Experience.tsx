@@ -1,19 +1,26 @@
+import li2Logo from '@/assets/li2-logo.png';
+import hexartLogo from '@/assets/hexart-logo.png';
+import nxtwaveLogo from '@/assets/nxtwave-logo.svg';
+
 const experiences = [
   {
     title: 'Outreach Manager',
     company: 'Li2 Edu',
+    logo: li2Logo,
     dates: 'Apr 2025 – Oct 2025',
     description: 'Managed teams and outreach operations, maintaining active communication with customers and partners.',
   },
   {
     title: 'Associate Web Developer',
     company: 'Hexart.in',
+    logo: hexartLogo,
     dates: 'Sep 2024 – Feb 2025',
     description: 'Worked on web development projects and conducted on-site seminars.',
   },
   {
     title: 'Teaching Assistant / Trainee',
     company: 'NxtWave',
+    logo: nxtwaveLogo,
     dates: 'Jul 2024 – Sep 2024',
     description: 'Solved doubts for learners and strengthened technical fundamentals.',
   },
@@ -49,6 +56,16 @@ const Experience = () => {
                 {/* Content */}
                 <div className={`ml-12 md:ml-0 md:w-1/2 ${idx % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
                   <div className="sakura-card p-6 hover:scale-[1.02] transition-transform duration-300">
+                    {/* Company Logo */}
+                    <div className={`mb-4 flex ${idx % 2 === 0 ? 'md:justify-end' : 'md:justify-start'} justify-center`}>
+                      <div className="w-20 h-16 flex items-center justify-center rounded-lg bg-background p-2" style={{ boxShadow: '0 4px 20px hsl(350 100% 88% / 0.4)' }}>
+                        <img
+                          src={exp.logo}
+                          alt={`${exp.company} logo`}
+                          className="max-w-full max-h-full object-contain"
+                        />
+                      </div>
+                    </div>
                     <span className="text-sm text-sakura-dark font-medium">{exp.dates}</span>
                     <h3 className="text-xl font-display font-bold mt-1">{exp.title}</h3>
                     <p className="text-muted-foreground font-medium">{exp.company}</p>

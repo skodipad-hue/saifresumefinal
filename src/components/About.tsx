@@ -1,4 +1,4 @@
-import { Code, Gamepad2, Coffee, Moon, Flame, Clock, Layers, Music } from 'lucide-react';
+import { Code, Coffee, Moon, Flame, Clock, Layers, Dribbble } from 'lucide-react';
 
 const aboutParagraphs = [
   "Hi there! I'm Saif, a passionate Full Stack Web Developer who believes in the power of clean code and thoughtful design. While I'm still early in my professional journey, I've poured countless hours into learning, building, and refining my craft.",
@@ -9,8 +9,7 @@ const aboutParagraphs = [
 
 const whatIDo = [
   { icon: Code, label: 'Coding' },
-  { icon: Gamepad2, label: 'Gaming' },
-  { icon: Music, label: 'Basketball' },
+  { icon: Dribbble, label: 'Basketball' },
   { icon: Coffee, label: 'Coffee' },
 ];
 
@@ -20,13 +19,6 @@ const achievements = [
   { icon: Layers, label: 'Strong full-stack foundation' },
   { icon: Moon, label: 'Late-night deep work lover' },
 ];
-
-const personalDetails = {
-  age: '20',
-  location: 'Hyderabad, Telangana',
-  email: 'rahamansaif029@gmail.com',
-  phone: '+91 9515719530',
-};
 
 const About = () => {
   return (
@@ -46,7 +38,7 @@ const About = () => {
         {/* What I Do Cards */}
         <div className="mb-16">
           <h3 className="text-2xl font-display font-bold text-center mb-8">What I Do</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+          <div className="grid grid-cols-3 gap-4 max-w-md mx-auto">
             {whatIDo.map((item, idx) => (
               <div
                 key={item.label}
@@ -57,31 +49,6 @@ const About = () => {
                 <span className="font-medium text-sm">{item.label}</span>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Personal Details */}
-        <div className="mb-16">
-          <div className="sakura-card p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-display font-bold text-center mb-6">Personal Details</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex items-center gap-3">
-                <span className="text-muted-foreground">Age:</span>
-                <span className="font-medium">{personalDetails.age}</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-muted-foreground">Location:</span>
-                <span className="font-medium">{personalDetails.location}</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-muted-foreground">Email:</span>
-                <span className="font-medium text-sm">{personalDetails.email}</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-muted-foreground">Phone:</span>
-                <span className="font-medium">{personalDetails.phone}</span>
-              </div>
-            </div>
           </div>
         </div>
 
