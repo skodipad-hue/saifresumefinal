@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter, FileDown, ArrowDown } from 'lucide-react';
+import profileImage from '@/assets/profile.jpeg';
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden sakura-glow float-animation">
                 <img
-                  src="/placeholder.svg"
+                  src={profileImage}
                   alt="K. Saifur Rahaman"
                   className="w-full h-full object-cover"
                 />
